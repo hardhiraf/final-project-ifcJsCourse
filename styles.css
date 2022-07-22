@@ -50,9 +50,9 @@ header {
     background-color: white;
     border: 2px solid rgba(237, 164, 48, 0.895);
     border-radius: 10px;
+    cursor: pointer;
 }
 .button_to_app:hover span{
     color: black;
     background-color: white;
 }
-
