@@ -7,18 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/index_styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/viewer_styles.css">
+    <title>IFC Viewer</title>
 </head>
 <body>
-    <header>
-        <img src="./image/logo.png" class="ifc_logo" alt="">
-        <h1>IFCjs Course Final Project</h1>
-        <h2>by hardhiraf</h2>
-        <button class="button_to_app"> 
-            <a href="project_gallery.html">To Project <span>&#8594;</span></a>
-        </button>
-    </header>
-    <script src="./styles/index_styles.js"></script>
+    <div id="viewer_container"></div>
+    <label class="custom_file_upload">
+        <input type="file" id="file_input">
+        Upload File
+    </label>
+    <script type="module" src="./viewer-bundle.js"></script>
 </body>
 </html>

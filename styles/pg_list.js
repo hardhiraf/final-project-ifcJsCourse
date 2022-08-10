@@ -7,7 +7,7 @@ console.log(projectCards);
 
 const templateProjectCard = projectCards[0];
 
-const baseURL = './model-viewer.html';
+const baseURL = './viewer.html';
 
 for(let project of projects) {
 

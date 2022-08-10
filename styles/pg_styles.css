@@ -90,6 +90,18 @@ body {
   transform: translateY(-5px);
 }
 
+.link_upload_file {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+.upload_file:hover .link_upload_file {
+  background-color: transparent;
+  color: black;
+  border: none;
+}
+
 /* From uiverse.io by @TimTrayler */
 .card {
   margin: 1rem;
@@ -177,3 +189,5 @@ body {
 .button:active {
   transform: translateY(-1px);
 }
+
+
