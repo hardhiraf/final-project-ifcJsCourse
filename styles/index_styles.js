@@ -1,5 +1,6 @@
 const mybutton = document.getElementsByClassName('button_to_app');
 const get_tag = document.querySelectorAll('*')
+const projectLink  = "project_gallery.html"
 
 mybutton[0].addEventListener('mouseover', function() {
     get_tag.forEach((item) => {

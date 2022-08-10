@@ -47,7 +47,7 @@ header {
     margin-top: 10rem;
     padding: 10px;
     color: black;
-    background-color: white;
+    background: white;
     border: 2px solid rgba(237, 164, 48, 0.895);
     border-radius: 10px;
     cursor: pointer;
@@ -55,4 +55,8 @@ header {
 .button_to_app:hover span{
     color: black;
     background-color: white;
+}
+
+a {
+    text-decoration: none;
 }
