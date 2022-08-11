@@ -1,5 +1,7 @@
 import { projects } from "/ifc_files.js";
 
+const imgLoc = ['./image/model1.png','./image/model2.png','./image/model3.png','./image/model4.png','./image/model5.png']
+
 // Get all cards
 const projectContainer = document.getElementById("example_files_container");
 const projectCards = Array.from(projectContainer.children);
@@ -27,3 +29,9 @@ for(let project of projects) {
 }
 
 templateProjectCard.remove();
+
+const imgTag = projectContainer.querySelectorAll('.model_image')
+
+for (let i = 0; imgLoc.length; i++) {
+    imgTag[i].src = imgLoc[i]
+}

@@ -121548,13 +121548,3 @@ if (currentProjectID === null) {
 window.onclick = () => viewer.IFC.selector.pickIfcItem(true);
 window.onmousemove = () => viewer.IFC.selector.prePickIfcItem();
 window.ondblclick = () => viewer.IFC.selector.unpickIfcItems();
-
-viewer.clipper.active = true;
-
-window.onkeydown = (event) => {
-  if (event.code === "KeyP") {
-    viewer.clipper.createPlane();
-  } else if (event.code === "KeyO") {
-    viewer.clipper.deletePlane();
-  }
-};
