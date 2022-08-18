@@ -8,7 +8,7 @@ const container = document.getElementById("viewer_container");
 const viewer = new IfcViewerAPI({
     container,
     backgroundColor: new Color("white")
-})
+});
 
 viewer.axes.setAxes();
 viewer.grid.setGrid();
@@ -44,6 +44,7 @@ let modelUrl;
 if (currentProjectID === null) {
     const input = document.getElementById("file_input");
     const label = document.querySelector('.custom_file_upload')
+    label.classList.remove('hidden')
     input.addEventListener("change", async () => {
         const file = input.files[0];
         modelUrl = URL.createObjectURL(file);
@@ -52,12 +53,11 @@ if (currentProjectID === null) {
     });
 } else {
     const label = document.querySelector('.custom_file_upload');
-    label.classList.add('hidden')
     const currentProject = projects.find((project) => project.id === currentProjectID);
     modelUrl = currentProject.url;
-    loadIfc(modelUrl)
+    loadIfc(modelUrl);
 }
 
-window.onclick = () => viewer.IFC.selector.pickIfcItem(true);
+window.onclick = () => viewer.IFC.selector.pickIfcItem();
 window.onmousemove = () => viewer.IFC.selector.prePickIfcItem();
 window.ondblclick = () => viewer.IFC.selector.unpickIfcItems();

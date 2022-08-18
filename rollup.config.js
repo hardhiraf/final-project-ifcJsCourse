@@ -1,6 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 
-export default {
+export default [{
   input: 'viewer.js',
   output: [
     {
@@ -11,4 +11,15 @@ export default {
   plugins: [
     resolve(),
   ]
-};
+}, {
+  input: './styles/index_styles.js',
+  output: [
+    {
+      format: 'esm',
+      file: './styles/index_bundle.js'
+    },
+  ],
+  plugins: [
+    resolve(),
+  ]
+}];

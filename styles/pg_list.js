@@ -5,7 +5,6 @@ const imgLoc = ['./image/model1.png','./image/model2.png','./image/model3.png','
 // Get all cards
 const projectContainer = document.getElementById("example_files_container");
 const projectCards = Array.from(projectContainer.children);
-console.log(projectCards);
 
 const templateProjectCard = projectCards[0];
 
@@ -20,6 +19,9 @@ for(let project of projects) {
     const cardTitle = newCard.querySelector('h3');
     cardTitle.textContent = project.name;
 
+    const imgCard = newCard.querySelector('img')
+    imgCard.src = imgLoc[parseInt(project.id)-1]
+
     // Add project URL to card
     const button = newCard.querySelector('a');
     button.href = baseURL + `?id=${project.id}`;
@@ -30,8 +32,9 @@ for(let project of projects) {
 
 templateProjectCard.remove();
 
-const imgTag = projectContainer.querySelectorAll('.model_image')
+// const imgTag = projectContainer.querySelectorAll('.model_image')
 
-for (let i = 0; imgLoc.length; i++) {
-    imgTag[i].src = imgLoc[i]
-}
+// for (let i = 0; imgLoc.length-1; i++) {
+//     imgTag[i].src = imgLoc[i]
+//     console.log(imgLoc[i])
+// }
