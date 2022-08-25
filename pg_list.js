@@ -1,4 +1,4 @@
-import { projects } from "/ifc_files.js";
+import { projects } from "./ifc_files.js";
 
 const imgLoc = ['./image/model1.png','./image/model2.png','./image/model3.png','./image/model4.png','./image/model5.png']
 
