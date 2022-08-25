@@ -3,19 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    --light-gray: rgb(123, 123, 123);
+    --light-blue: #76a4ddf0;
+    --translucent-white: rgba(255, 255, 255, 0.7);
+    --ifcJsColor: rgba(237, 164, 48, 0.895);
+    --normal-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    --blur-filter: blur(8px);
   }
 
 html, body {
     overflow: hidden;
-}
-  
-#viewer_container{
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-    width: 100%;
-    height: 100%;
 }
 
 #file_input {
@@ -45,4 +42,188 @@ html, body {
 
 .hidden {
     display: none;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+}
+
+.button_tools {
+    height: 3rem;
+    margin: 0.5rem;
+    padding: 0.7rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.button_tools:hover {
+    border: 2px solid black;
+}
+
+/*Tree view: https://www.w3schools.com/howto/howto_js_treeview.asp*/
+
+.ifc-tree-menu {
+    position: absolute;
+    overflow-y:scroll;
+    background-color: white;
+    height: 100vh;
+}
+
+li ul {
+    user-select:none;
+    cursor: pointer;
+}
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+    margin: 0.5rem;
+    padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
+    margin-left: 10px;
+}
+
+#viewer_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonActive {
+    filter: invert(75%);
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.ifcjs-dimension-preview {
+    width: 1rem;
+    height: 1rem;
+    background-color: #FFA50F;
+    border-radius: 1rem;
+    opacity: 0.5;
+}
+
+.ifcjs-dimension-label {
+    background-color: black;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.ifc-property-menu {
+    border: 1px solid gray;
+    width: 21rem;
+    max-height: 30rem;
+    position: absolute;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.property-title {
+    color: black;
+    display: flex;
+    background-color: aquamarine;
+    justify-content:center ;
+    cursor: move;
+}
+
+.ifc-property-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.5rem;
+    border-bottom: solid 1px gray;
+}
+
+.ifc-property-value {
+    width: 100%;
+    text-align: right;
+}
+
+/* .hidden {
+    visibility: hidden;
+} */
+
+.base-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    pointer-events: all;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    font-size:medium;
+    font-weight: bold;
+    color: red;
+}
+
+.label {
+    background: rgba(201, 180, 176, 0.6);
+    padding: 8px;
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    pointer-events: all;
+    word-wrap: break-word;
 }

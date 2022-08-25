@@ -121480,9 +121480,14 @@ viewer.context.toggleCameraControls(false);
 const sizeRatio = window.innerHeight/window.innerWidth;
 const renderer =  viewer.context.getRenderer();
 const scene = viewer.context.getScene();
+
 let customWidth = 700;
 
 renderer.setSize(customWidth, customWidth*sizeRatio);
+
+window.addEventListener("resize", () => {
+    viewer.context.updateAspect();
+});
 
 viewer.axes.setAxes();
 viewer.grid.setGrid();

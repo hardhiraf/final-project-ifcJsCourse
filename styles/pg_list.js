@@ -28,13 +28,7 @@ for(let project of projects) {
 
     // Add card to container
     projectContainer.appendChild(newCard);
+    
 }
 
 templateProjectCard.remove();
-
-// const imgTag = projectContainer.querySelectorAll('.model_image')
-
-// for (let i = 0; imgLoc.length-1; i++) {
-//     imgTag[i].src = imgLoc[i]
-//     console.log(imgLoc[i])
-// }

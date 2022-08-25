@@ -16,6 +16,29 @@
         <input type="file" id="file_input">
         Upload File
     </label>
+    <div class="button_container">
+        <img src="./image/button/Data Tree.svg" alt="" class="button_tools" id="buttonTree">
+        <img src="./image/button/Measure.svg" alt="" class="button_tools" id="buttonMeasure">
+        <img src="./image/button/Property.svg" alt="" class="button_tools" id="buttonProperty">
+        <img src="./image/button/Cut Plane.svg" alt="" class="button_tools" id="buttonCutPlane">
+        <img src="./image/button/Create Comment.svg" alt="" class="button_tools" id="buttonComment"> 
+        <img src="./image/button/Postprocessing.svg" alt="" class="button_tools" id="buttonPostProcessing">
+    </div>
+    <div class="ifc-tree-menu hidden" id="ifcTree">
+        <ul id="myUL">
+            <li id="tree-root"></li>
+        </ul>
+    </div>
+    <div class="ifc-property-menu hidden" id="ifcProperty">
+        <div class="property-title" id="ifcPropertyTitle">
+            Property
+        </div>
+        <div class="ifc-property-item">
+            <div>Key</div>
+            <div class="ifc-property-value">Value</div>
+        </div>
+        <div id="ifc-property-menu-root"></div>
+    </div>
     <script type="module" src="./viewer-bundle.js"></script>
 </body>
 </html>
