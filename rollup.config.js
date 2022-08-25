@@ -12,11 +12,11 @@ export default [{
     resolve(),
   ]
 }, {
-  input: './styles/index_styles.js',
+  input: 'index_styles.js',
   output: [
     {
       format: 'esm',
-      file: './styles/index_bundle.js'
+      file: 'index_bundle.js'
     },
   ],
   plugins: [
