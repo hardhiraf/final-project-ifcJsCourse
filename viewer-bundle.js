@@ -121887,5 +121887,6 @@ const helpDocs = document.getElementById("helperDocs");
 
 console.log(helpDocs);
 btnHelp.onclick = () => {
+  btnHelp.classList.toggle("buttonActive");
   helpDocs.classList.toggle("hidden");
 };
