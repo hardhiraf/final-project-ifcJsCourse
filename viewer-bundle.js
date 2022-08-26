@@ -121534,6 +121534,7 @@ const url = new URL(currentUrl);
 const currentProjectID = url.searchParams.get("id");
 
 let modelUrl;
+const btnTools = document.getElementById("buttonTools");
 
 if (currentProjectID === null) {
   const input = document.getElementById("file_input");
@@ -121544,6 +121545,7 @@ if (currentProjectID === null) {
     modelUrl = URL.createObjectURL(file);
     loadIfc(modelUrl);
     label.classList.add("hidden");
+    btnTools.classList.remove("disabled");
   });
 } else {
   document.querySelector(".custom_file_upload");
@@ -121552,6 +121554,7 @@ if (currentProjectID === null) {
   );
   modelUrl = currentProject.url;
   loadIfc(modelUrl);
+  btnTools.classList.remove("disabled");
 }
 
 // Initialize Button
@@ -121865,4 +121868,24 @@ btnPostProcessing.onclick = () => {
   } else {
     viewer.context.renderer.postProduction.active = false;
   }
+};
+
+// home button
+const btnHome = document.getElementById("homeButton");
+const homeUrl = "./index.html";
+
+btnHome.onclick = () => {
+  const link = document.createElement("a");
+  link.id = "home-page";
+  link.href = homeUrl;
+  link.click();
+};
+
+// help button
+const btnHelp = document.getElementById("buttonHelp");
+const helpDocs = document.getElementById("helperDocs");
+
+console.log(helpDocs);
+btnHelp.onclick = () => {
+  helpDocs.classList.toggle("hidden");
 };
